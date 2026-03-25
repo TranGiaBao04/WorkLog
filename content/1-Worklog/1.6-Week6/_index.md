@@ -8,63 +8,63 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 Objectives
 
-This week focused on learning and practicing relational databases using SQL Server, including schema design, data operations, and performance evaluation.
+This week focused on learning and practicing relational databases with SQL Server, including table design, data manipulation, and query performance evaluation.
 
-- **SQL Server Fundamentals**:
-  - Databases, tables, rows, columns
+- **Learning SQL Server fundamentals**:
+  - Databases, tables, rows, and columns
   - Primary keys and foreign keys
-  - Schema design
+  - Schema design and table structure
 
-- **Database Setup**:
-  - Create databases and tables
-  - Configure constraints
+- **Creating and configuring databases**:
+  - Creating databases and tables
+  - Setting up necessary constraints
 
-- **CRUD Operations using SQL**:
+- **Practicing CRUD operations with SQL**:
   - INSERT
   - SELECT
   - UPDATE
   - DELETE
 
-- **Tools Usage**:
+- **Using supporting tools**:
   - SQL Server Management Studio (SSMS) / Azure Data Studio
-  - AWS RDS (SQL Server) or local environment
+  - AWS RDS (SQL Server) or a local environment
 
-- **Performance Evaluation**:
-  - Query execution time
-  - Basic execution plan analysis
-
----
-
-### Tasks Overview
-
-| Day | Task | Start Date | Completion Date | References |
-| :-: |------|:----------:|:---------------:|------------|
-|  2  | **SQL Server Fundamentals**:<br>- Database, tables, schema<br>- Primary & Foreign Keys | 09/02/2026 | 09/02/2026 | Microsoft Docs |
-|  3  | **Database Setup**:<br>- Create database<br>- Design tables and constraints | 10/02/2026 | 10/02/2026 | Microsoft Docs |
-|  4  | **CRUD Operations**:<br>- INSERT / SELECT / UPDATE / DELETE | 11/02/2026 | 11/02/2026 | Microsoft Docs |
-|  5  | **Tools & Performance**:<br>- SSMS / Azure Data Studio<br>- Query performance & execution plans | 12/02/2026 | 12/02/2026 | Microsoft Docs |
+- **Evaluating performance**:
+  - Monitoring query execution time
+  - Reviewing basic execution plans
 
 ---
 
-### Week 6 Achievements
+### Work Overview
 
-#### What was accomplished
+| Day | Task                                                                                           | Start Date | Completion Date | Reference Materials |
+| :-: | ---------------------------------------------------------------------------------------------- | :--------: | :-------------: | ------------------- |
+|  1  | **SQL Server Fundamentals**:<br>- Database, tables, schema<br>- Primary & Foreign Key          | 09/02/2026 |   09/02/2026    | Microsoft Docs      |
+|  2  | **Database Setup**:<br>- Creating databases<br>- Designing tables and constraints              | 10/02/2026 |   10/02/2026    | Microsoft Docs      |
+|  3  | **CRUD Operations**:<br>- INSERT / SELECT / UPDATE / DELETE                                    | 11/02/2026 |   11/02/2026    | Microsoft Docs      |
+|  4  | **Tools & Performance**:<br>- SSMS / Azure Data Studio<br>- Query performance & execution plan | 12/02/2026 |   12/02/2026    | Microsoft Docs      |
+
+---
+
+### Achievements
+
+#### What Was Completed
 
 - Successfully created and configured a **SQL Server database**
-- Understood **schema design, primary keys, and foreign keys**
-- Performed full **CRUD operations using SQL queries**
-- Used **SSMS / Azure Data Studio** effectively
-- Worked with **AWS RDS (SQL Server)** or local setup
+- Gained a solid understanding of **schema, primary keys, and foreign keys**
+- Performed all essential **CRUD operations using SQL**
+- Became proficient in using **SSMS / Azure Data Studio**
+- Became familiar with **AWS RDS (SQL Server)** or a local setup
 - Evaluated **query performance and execution plans**
 
 #### Architecture Summary
 
-- **Database**: SQL Server (Relational)
+- **Database**: SQL Server (Relational Database)
 - **Schema Design**:
-  - Tables + relationships
-  - Primary key / Foreign key
+  - Tables and relationships
+  - Primary keys / Foreign keys
 - **Access Tools**:
   - SSMS / Azure Data Studio
 - **Performance**:
-  - Query optimization basics
+  - Basic query optimization
   - Execution plan analysis

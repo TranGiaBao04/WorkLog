@@ -9,11 +9,11 @@ chapter: false
 
 ### Student Information:
 
-&emsp; **Full Name:** Vu Minh Quang
+&emsp; **Full Name:** Tran Gia Bao
 
-&emsp; **Phone Number:** 0378554725
+&emsp; **Phone Number:** 0767658640
 
-&emsp; **Email:** vminhquang05@gmail.com
+&emsp; **Email:** baotgse182346@fpt.edu.vn
 
 &emsp; **University:** FPT Univeristy
 

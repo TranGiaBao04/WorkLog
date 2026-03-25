@@ -9,11 +9,11 @@ chapter: false
 
 ### Thông tin sinh viên:
 
-&emsp; **Họ và tên:** Vũ Minh Quang
+&emsp; **Họ và tên:** Trần Gia Bảo
 
-&emsp; **Số điện thoại:** 0378554725
+&emsp; **Số điện thoại:** 0767658640
 
-&emsp; **Email:** vminhquang05@gmail.com
+&emsp; **Email:** baotgse182346@fpt.edu.vn
 
 &emsp; **Trường:** Trường đại học FPT
 

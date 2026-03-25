@@ -8,57 +8,57 @@ pre: " <b> 1.13. </b> "
 
 ### Week 13 Objectives
 
-This week focused on post-deployment monitoring, performance optimization, bug fixing, and gathering user feedback after the system officially went live.
+This week focused on the post-go-live phase, with attention given to monitoring the live system, improving performance, fixing issues, and collecting feedback from actual users. The goal was to keep the platform stable in production while building a clear direction for future improvements.
 
-- **Post-Deployment Monitoring**:
-  - Monitor system performance and uptime
-  - Analyze logs and detect anomalies
-  - Ensure system stability under real user load
+- **Post-deployment monitoring**:
+  - Tracking system performance and uptime
+  - Analyzing logs to detect unusual behavior
+  - Ensuring stable operation under real user traffic
 
-- **Performance Optimization**:
-  - Optimize database queries and API response time
-  - Improve frontend loading performance
-  - Reduce system latency
+- **Performance improvement**:
+  - Optimizing database queries and API response speed
+  - Improving frontend loading performance
+  - Reducing overall system latency
 
-- **Bug Fixing & Improvements**:
-  - Identify and fix issues reported by users
-  - Improve UI/UX based on real usage
-  - Refactor minor components for maintainability
+- **Bug fixing and refinements**:
+  - Identifying and resolving issues reported by users
+  - Improving UI/UX based on actual usage patterns
+  - Refactoring smaller components to improve maintainability
 
-- **User Feedback Collection**:
-  - Gather feedback from initial users
-  - Analyze user behavior and system usage
-  - Plan improvements for next iteration
+- **Collecting user feedback**:
+  - Gathering input from the first group of users
+  - Analyzing how users interact with the platform
+  - Planning enhancements for upcoming releases
 
 ---
 
-### Tasks Overview
+### Work Overview
 
-| Day | Task | Start Date | Completion Date | References |
-| :-: |------|:----------:|:---------------:|------------|
-|  2  | **System Monitoring**:<br>- Track logs & metrics<br>- Check uptime | 06/04/2026 | 06/04/2026 | CloudWatch |
-|  3  | **Performance Optimization**:<br>- Optimize queries<br>- Improve API speed | 07/04/2026 | 08/04/2026 | Internal |
-|  4  | **Bug Fixing**:<br>- Fix reported issues<br>- Improve UI/UX | 09/04/2026 | 10/04/2026 | Internal |
-|  5  | **User Feedback Analysis**:<br>- Collect feedback<br>- Analyze behavior | 11/04/2026 | 11/04/2026 | Internal |
-|  6  | **System Improvement Planning**:<br>- Define next improvements<br>- Roadmap update | 12/04/2026 | 12/04/2026 | Internal |
+| Day | Task                                                                                | Start Date | Completion Date | Materials  |
+| :-: | ----------------------------------------------------------------------------------- | :--------: | :-------------: | ---------- |
+|  2  | **System Monitoring**:<br>- Tracking logs and metrics<br>- Checking uptime          | 06/04/2026 |   06/04/2026    | CloudWatch |
+|  3  | **Performance Optimization**:<br>- Optimizing queries<br>- Improving API speed      | 07/04/2026 |   08/04/2026    | Internal   |
+|  4  | **Bug Fixing**:<br>- Resolving bugs<br>- Improving UI/UX                            | 09/04/2026 |   10/04/2026    | Internal   |
+|  5  | **Feedback Analysis**:<br>- Collecting user feedback<br>- Analyzing usage behavior  | 11/04/2026 |   11/04/2026    | Internal   |
+|  6  | **Improvement Planning**:<br>- Defining upgrade direction<br>- Updating the roadmap | 12/04/2026 |   12/04/2026    | Internal   |
 
 ---
 
 ### Week 13 Achievements
 
-#### What was accomplished
+#### What Was Accomplished
 
-- Monitored system performance after **official go-live**
-- Identified and resolved initial bugs from real users
-- Improved system performance and responsiveness
-- Enhanced user experience based on feedback
-- Collected valuable insights for future development
-- Established a stable post-deployment workflow
+- Closely monitored the system after the official **go-live**
+- Identified and resolved the first issues reported by real users
+- Improved both system performance and responsiveness
+- Enhanced the overall user experience
+- Collected important usage data and feedback for future improvements
+- Established a post-deployment operational process
 
-#### Architecture Summary
+#### Architecture Overview
 
-- **Stage**: Post-production / Maintenance
-- **Monitoring**: Continuous tracking (logs, metrics, alerts)
-- **Optimization**: Performance tuning applied
-- **Feedback Loop**: Users → Feedback → Improvements → System
+- **Stage**: Post-deployment / Live operations
+- **Monitoring**: Continuous tracking through logs, metrics, and alerts
+- **Optimization**: Performance tuning has been applied
+- **Improvement Loop**: Users → Feedback → Improvements → System
 - **Status**: Stable and continuously improving

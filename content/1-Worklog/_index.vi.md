@@ -6,80 +6,80 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Trong phần này, tôi ghi lại hành trình học tập trong **5 tuần đầu tiên** khi tham gia chương trình **AWS FCJ Internship**.
+Phần này tổng hợp lại quá trình học tập và thực hành của tôi trong **5 tuần đầu** khi tham gia chương trình **AWS FCJ Internship**.
 
-Trong giai đoạn này, tôi đã có cơ hội tiếp cận và thực hành các kiến thức về **Cloud Computing** từ cơ bản đến nâng cao, đồng thời từng bước xây dựng tư duy hệ thống và khả năng triển khai thực tế.
+Trong giai đoạn này, tôi từng bước làm quen với các kiến thức nền tảng và nâng cao về **Cloud Computing**, đồng thời rèn luyện khả năng tư duy hệ thống, tiếp cận kiến trúc hạ tầng và triển khai các bài toán thực tế trên AWS.
 
-Chương trình không chỉ giúp tôi nắm vững các dịch vụ cốt lõi của AWS mà còn phát triển kỹ năng về **tư duy kiến trúc, vận hành hệ thống và giải quyết vấn đề thực tế** — những yếu tố quan trọng cho vị trí **Cloud Engineer** hoặc **Solutions Architect**.
+Không chỉ dừng lại ở việc học các dịch vụ cốt lõi, chương trình còn giúp tôi phát triển thêm kỹ năng về **thiết kế kiến trúc, vận hành hệ thống và xử lý vấn đề trong môi trường thực tế** — những năng lực quan trọng đối với lộ trình trở thành **Cloud Engineer** hoặc **Solutions Architect**.
 
 ---
 
-## Lộ trình học tập 5 tuần đầu
+## Lộ trình học tập trong 5 tuần đầu
 
-### **Tuần 1: AWS Fundamentals – Nền tảng cơ bản**
+### **Tuần 1: AWS Fundamentals – Kiến thức nền tảng**
 
-- Tìm hiểu tổng quan AWS và mô hình Cloud  
-- Tạo và bảo mật tài khoản AWS (MFA, IAM best practices)  
-- Thiết lập **IAM Users, Groups, Roles**  
-- Cấu hình **AWS Budgets** để quản lý chi phí  
-- Làm quen với AWS Console  
+- Tìm hiểu cách AWS vận hành và các khái niệm cơ bản của Cloud
+- Tạo tài khoản AWS và thiết lập các lớp bảo mật cần thiết như MFA, IAM best practices
+- Thực hành với **IAM Users, Groups, Roles**
+- Thiết lập **AWS Budgets** để theo dõi và kiểm soát chi phí
+- Làm quen với giao diện **AWS Console**
 
 ---
 
 ### **Tuần 2: IAM & Networking**
 
-- Thực hành **IAM** (Users, Groups, Policies, Roles, Switch Role)  
-- Nắm vững kiến trúc **VPC**  
-- So sánh **Security Group vs Network ACL**  
-- Triển khai và kết nối **EC2 instance**  
-- Cấu hình:
-  - **Hybrid DNS (Route 53 Resolver)**  
-  - **VPC Peering**  
-  - **AWS Transit Gateway**  
+- Thực hành chuyên sâu với **IAM** gồm Users, Groups, Policies, Roles và Switch Role
+- Nắm bắt kiến trúc mạng **VPC**
+- Phân biệt vai trò của **Security Group** và **Network ACL**
+- Triển khai và kết nối với **EC2 instance**
+- Cấu hình các thành phần mạng như:
+  - **Hybrid DNS (Route 53 Resolver)**
+  - **VPC Peering**
+  - **AWS Transit Gateway**
 
 ---
 
-### **Tuần 3: Dịch vụ AWS cốt lõi & Định hướng dự án**
+### **Tuần 3: Dịch vụ AWS trọng tâm & Định hướng dự án**
 
-- Lên ý tưởng và thiết kế kiến trúc cho **dự án cuối kỳ**  
-- Thực hành:
-  - **EC2** (triển khai, cấu hình, custom AMI)  
-  - **S3** (host website tĩnh, versioning)  
-  - **IAM Role**, **Cloud9**  
-- Làm việc với **RDS** để xây dựng database  
-- Ôn tập và củng cố kiến thức  
+- Xây dựng ý tưởng và thiết kế kiến trúc cho **dự án cuối kỳ**
+- Thực hành các dịch vụ:
+  - **EC2** (triển khai máy ảo, cấu hình, custom AMI)
+  - **S3** (lưu trữ và host website tĩnh, versioning)
+  - **IAM Role**, **Cloud9**
+- Làm việc với **RDS** để xây dựng cơ sở dữ liệu
+- Tổng hợp và củng cố lại kiến thức đã học
 
 ---
 
-### **Tuần 4: Thiết kế hệ thống & Tối ưu (Well-Architected)**
+### **Tuần 4: Thiết kế hệ thống & Tối ưu theo Well-Architected Framework**
 
-- Áp dụng 5 trụ cột AWS:
-  - **Vận hành (Operational Excellence)**  
-  - **Bảo mật (Security)**  
-  - **Độ tin cậy (Reliability)**  
-  - **Hiệu năng (Performance Efficiency)**  
-  - **Tối ưu chi phí (Cost Optimization)**  
+- Tiếp cận và áp dụng 5 trụ cột của AWS:
+  - **Vận hành (Operational Excellence)**
+  - **Bảo mật (Security)**
+  - **Độ tin cậy (Reliability)**
+  - **Hiệu năng (Performance Efficiency)**
+  - **Tối ưu chi phí (Cost Optimization)**
 
-- Thực hành:
-  - Automation với Lambda  
-  - Monitoring với CloudWatch  
-  - CI/CD với CodePipeline  
-  - Container với Docker & ECS  
+- Thực hành với:
+  - Tự động hóa bằng Lambda
+  - Giám sát hệ thống với CloudWatch
+  - Xây dựng CI/CD bằng CodePipeline
+  - Triển khai container với Docker và ECS
 
 ---
 
 ### **Tuần 5: Chuẩn bị dự án & Thiết lập môi trường**
 
-- Làm việc nhóm và xác định phạm vi dự án  
-- Thiết kế kiến trúc hệ thống  
-- Chuẩn bị môi trường phát triển  
-- Thử nghiệm các dịch vụ AWS phục vụ dự án  
-- Tham gia sự kiện **AWS re:Invent Recap HCMC (04/02/2026)**  
-- Ôn tập kiến thức từ tuần 1–4  
+- Phối hợp với nhóm để xác định phạm vi và hướng triển khai dự án
+- Thiết kế kiến trúc tổng thể cho hệ thống
+- Chuẩn bị môi trường phát triển phù hợp
+- Thử nghiệm các dịch vụ AWS cần thiết cho dự án
+- Tham gia sự kiện **AWS re:Invent Recap HCMC (04/02/2026)**
+- Ôn tập lại kiến thức từ tuần 1 đến tuần 4
 
 ---
 
 > **Ghi chú:**  
-> Đây là phần tổng kết **5 tuần đầu tiên** trong chương trình **AWS FCJ Internship (12 tuần)**.
+> Đây là phần tổng kết chặng đầu gồm **5 tuần đầu tiên** trong chương trình **AWS FCJ Internship (12 tuần)**.
 
-> Các tuần tiếp theo sẽ tập trung vào **triển khai dự án thực tế, tích hợp hệ thống và vận hành production**.
+> Ở các giai đoạn tiếp theo, trọng tâm sẽ chuyển sang **phát triển dự án thực tế, tích hợp hệ thống và vận hành trên môi trường production**.
