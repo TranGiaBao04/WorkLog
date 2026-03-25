@@ -1,4 +1,4 @@
-baseURL = "https://quangvmzu.github.io/fcj-workshop/"
+baseURL = "https://trangiabao04.github.io/WorkLog/"
 relativeURLs = true
 canonifyURLs = true
 publishDir = "docs"
@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "vminhquang05@gmail.com"
+  author = "baotgse182346@fpt.edu.vn"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
