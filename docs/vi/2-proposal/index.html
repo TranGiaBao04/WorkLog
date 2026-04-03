@@ -15,21 +15,21 @@
     <title>Proposal :: Báo cáo thực tập</title>
 
     
-    <link href="../../css/nucleus.css?1774925427" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1774925427" rel="stylesheet">
-    <link href="../../css/hybrid.css?1774925427" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1774925427" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1774925427" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1774925427" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1774925427" rel="stylesheet">
-    <link href="../../css/theme.css?1774925427" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1774925427" rel="stylesheet">
+    <link href="../../css/nucleus.css?1775221866" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1775221866" rel="stylesheet">
+    <link href="../../css/hybrid.css?1775221866" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1775221866" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1775221866" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1775221866" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1775221866" rel="stylesheet">
+    <link href="../../css/theme.css?1775221866" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1775221866" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1774925427" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1775221866" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1774925427"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1775221866"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -91,14 +91,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1774925427"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1774925427"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1775221866"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1775221866"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/trangiabao04.github.io\/WorkLog\/\/vi";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1774925427"></script>
+<script type="text/javascript" src="../../js/search.js?1775221866"></script>
  
   </div>
 
@@ -1071,8 +1071,10 @@
         <li><a href="#1-tóm-tắt-điều-hành">1. Tóm tắt điều hành</a></li>
         <li><a href="#2-bài-toán-đặt-ra">2. Bài toán đặt ra</a></li>
         <li><a href="#3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</a></li>
+        <li><a href="#tầng-data-layer">Tầng Data Layer</a></li>
+        <li><a href="#tầng-observability--security">Tầng Observability &amp; Security</a></li>
         <li><a href="#4-triển-khai-kỹ-thuật">4. Triển khai kỹ thuật</a></li>
-        <li><a href="#5-kế-hoạch-triển-khai-và-các-cột-mốc">5. Kế hoạch triển khai và các cột mốc</a></li>
+        <li><a href="#5-kế-hoạch-triển-khai">5. Kế hoạch triển khai</a></li>
         <li><a href="#6-dự-toán-chi-phí">6. Dự toán chi phí</a></li>
         <li><a href="#7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</a></li>
         <li><a href="#8-kết-quả-kỳ-vọng">8. Kết quả kỳ vọng</a></li>
@@ -1107,51 +1109,87 @@
 <h2 id="nền-tảng-backend-thông-minh-cho-vận-hành-trạm-sạc-và-thanh-toán-số">Nền tảng backend thông minh cho vận hành trạm sạc và thanh toán số</h2>
 <h3 id="1-tóm-tắt-điều-hành">1. Tóm tắt điều hành</h3>
 <p>Hệ thống quản lý trạm sạc xe điện là một nền tảng backend tập trung được xây dựng nhằm hỗ trợ toàn bộ vòng đời vận hành của dịch vụ sạc xe điện. Hệ thống bao phủ các nghiệp vụ cốt lõi như tìm kiếm trạm sạc, quản lý khung giờ, tạo và xác nhận đặt chỗ, theo dõi phiên sạc, tạo hóa đơn, xử lý thanh toán và quản lý tuân thủ của tài xế trong một nền tảng thống nhất.</p>
-<p>Được phát triển trên Spring Boot và tích hợp với hạ tầng cloud, hệ thống mang lại sự cân bằng giữa độ ổn định vận hành, tính bảo mật và khả năng mở rộng về lâu dài. Nền tảng hỗ trợ phân quyền theo vai trò cho tài xế, nhân viên vận hành và quản trị viên; tự động hóa việc quản lý slot và vòng đời phiên sạc; đồng thời tích hợp VNPay cho thanh toán trực tuyến, Amazon S3 và CloudFront cho lưu trữ và phân phối nội dung frontend, Amazon RDS for SQL Server cho cơ sở dữ liệu quản lý tập trung, AWS Map cho tích hợp bản đồ, cùng dịch vụ email SMTP cho các thông báo giao dịch và vận hành.</p>
-<p>Giải pháp này đặc biệt phù hợp với các đơn vị khai thác trạm sạc EV đang muốn số hóa quy trình vận hành, nâng cao hiệu suất sử dụng trạm, giảm các thao tác thủ công, chuẩn hóa quy trình dịch vụ và chuẩn bị nền tảng kỹ thuật để mở rộng trong tương lai.</p>
+<p>Hệ thống được triển khai trên kiến trúc AWS Cloud hiện đại theo mô hình phân lớp (Edge Layer – Application Layer – Data Layer – Observability &amp; Security), đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng linh hoạt.</p>
+<p>Kiến trúc sử dụng CloudFront CDN kết hợp WAF để phân phối nội dung và bảo vệ hệ thống, Application Load Balancer và Auto Scaling Group để xử lý tải động, cùng với Amazon RDS Multi-AZ đảm bảo tính sẵn sàng cao cho dữ liệu. Ngoài ra, các dịch vụ như Secrets Manager, KMS, CloudWatch, CloudTrail và SES giúp tăng cường bảo mật, giám sát và vận hành hệ thống trong môi trường production.</p>
+<p>Giải pháp phù hợp với các hệ thống EV quy mô lớn cần độ ổn định cao, khả năng mở rộng và bảo mật theo tiêu chuẩn cloud hiện đại.</p>
+<hr>
 <h3 id="2-bài-toán-đặt-ra">2. Bài toán đặt ra</h3>
 <h4 id="vấn-đề-hiện-tại-là-gì">Vấn đề hiện tại là gì?</h4>
-<p>Khi thị trường xe điện phát triển nhanh, các đơn vị vận hành trạm sạc phải đối mặt với áp lực ngày càng lớn trong việc quản lý công suất trạm, lịch đặt chỗ, phiên sạc, hóa đơn, thanh toán và dịch vụ hỗ trợ người dùng. Nếu các hoạt động này vẫn được thực hiện thủ công hoặc phân tán trên nhiều hệ thống riêng lẻ, doanh nghiệp sẽ gặp phải nhiều vấn đề đáng kể:</p>
+<p>Trong bối cảnh thị trường xe điện phát triển nhanh, các hệ thống quản lý trạm sạc thường gặp các vấn đề:</p>
 <ul>
-<li>Khó theo dõi tình trạng slot trống theo thời gian thực</li>
-<li>Quy trình đặt chỗ, xác nhận và tiếp nhận người dùng còn rời rạc, kém hiệu quả</li>
-<li>Chậm trễ trong việc tạo hóa đơn và đối soát thanh toán</li>
-<li>Khó kiểm soát các chính sách vận hành như quá giờ sạc hoặc vi phạm sử dụng</li>
-<li>Thiếu công cụ giữ chân khách hàng như chương trình điểm thưởng</li>
-<li>Gặp khó khăn trong việc quản lý tập trung nhiều nhóm người dùng như tài xế, nhân viên và quản trị viên</li>
-<li>Thiếu kiến trúc số thống nhất kết nối frontend, backend, bản đồ và cơ sở dữ liệu trong cùng một hệ thống</li>
+<li>Khó mở rộng khi lượng người dùng tăng nhanh</li>
+<li>Hệ thống dễ bị quá tải do thiếu load balancing</li>
+<li>Database trở thành điểm lỗi đơn (single point of failure)</li>
+<li>Thiếu lớp bảo mật (WAF, secrets management)</li>
+<li>Backend expose trực tiếp ra Internet gây rủi ro bảo mật</li>
+<li>Thiếu hệ thống giám sát và logging</li>
 </ul>
-<p>Nếu không có một hệ thống backend tập trung, đơn vị vận hành có nguy cơ khai thác hạ tầng chưa hiệu quả, chất lượng dịch vụ thiếu nhất quán, khó mở rộng quy mô và suy giảm trải nghiệm người dùng.</p>
 <h4 id="giải-pháp-đề-xuất">Giải pháp đề xuất</h4>
-<p>Giải pháp được đề xuất là một hệ thống backend quản lý vận hành trạm sạc EV theo mô hình tập trung, có khả năng điều phối toàn bộ quy trình từ đầu đến cuối. Hệ thống cung cấp đầy đủ các năng lực cần thiết để vận hành dịch vụ một cách đồng bộ, bao gồm:</p>
+<p>Giải pháp là xây dựng hệ thống backend trên AWS theo kiến trúc chuẩn production với:</p>
 <ul>
-<li>Xác thực người dùng an toàn và phân quyền theo vai trò</li>
-<li>Quy trình đặt chỗ và giữ slot rõ ràng, có kiểm soát</li>
-<li>Tự động quản lý vòng đời phiên sạc</li>
-<li>Tạo hóa đơn và tính phí theo nghiệp vụ</li>
-<li>Tích hợp thanh toán trực tuyến qua VNPay</li>
-<li>Theo dõi vi phạm tài xế và thực thi chính sách tuân thủ</li>
-<li>Quản lý điểm thưởng nhằm tăng mức độ quay lại sử dụng</li>
-<li>Lưu trữ tệp và tài nguyên tĩnh trên Amazon S3</li>
-<li>Phân phối nội dung thông qua CloudFront</li>
-<li>Tích hợp bản đồ bằng AWS Map</li>
-<li>Tự động hóa sinh slot và xử lý booking quá hạn bằng các tác vụ theo lịch</li>
+<li>Route 53 + CloudFront + WAF cho tầng Edge</li>
+<li>S3 lưu trữ frontend (private + OAC)</li>
+<li>ALB + EC2 private subnet + Auto Scaling cho backend</li>
+<li>NAT Gateway cho outbound traffic</li>
+<li>RDS Multi-AZ cho database</li>
+<li>Secrets Manager + KMS cho bảo mật</li>
+<li>CloudWatch + CloudTrail cho monitoring</li>
+<li>SES cho email service</li>
+<li>SSM cho quản trị hệ thống</li>
 </ul>
-<p>Thông qua việc tập trung các chức năng này vào một nền tảng thống nhất, doanh nghiệp có thể chuẩn hóa vận hành, cải thiện chất lượng dịch vụ, tăng năng lực kiểm soát và xây dựng nền tảng số sẵn sàng cho tăng trưởng.</p>
-<h4 id="lợi-ích-và-hiệu-quả-đầu-tư">Lợi ích và hiệu quả đầu tư</h4>
-<p>Giải pháp mang lại cả giá trị vận hành lẫn giá trị kinh doanh trong ngắn hạn và dài hạn:</p>
-<ul>
-<li><strong>Tăng hiệu suất sử dụng trạm</strong> nhờ quản lý slot chặt chẽ và quy trình đặt chỗ rõ ràng</li>
-<li><strong>Cải thiện trải nghiệm người dùng</strong> thông qua đặt chỗ nhanh hơn, thông tin minh bạch hơn và thông báo kịp thời hơn</li>
-<li><strong>Tối ưu vận hành</strong> nhờ giảm đáng kể khối lượng công việc thủ công trong việc điều phối, lập hóa đơn và theo dõi thanh toán</li>
-<li><strong>Bảo vệ doanh thu</strong> thông qua việc kiểm soát thanh toán, xử lý quá giờ và thực thi chính sách vi phạm</li>
-<li><strong>Tạo nền tảng mở rộng bền vững</strong> cho mô hình nhiều trạm sạc và lưu lượng người dùng tăng cao</li>
-<li><strong>Nâng cao khả năng giữ chân khách hàng</strong> nhờ chương trình điểm thưởng và trải nghiệm dịch vụ nhất quán</li>
-<li><strong>Tăng độ sẵn sàng hạ tầng</strong> nhờ kiến trúc tách biệt rõ frontend, backend và cơ sở dữ liệu</li>
-</ul>
+<hr>
 <h3 id="3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</h3>
-<p>Nền tảng được thiết kế theo kiến trúc đơn khối phân lớp, trong đó lớp phân phối frontend, lớp xử lý API backend và lớp cơ sở dữ liệu được tách biệt rõ ràng. Theo sơ đồ triển khai hiện tại, người dùng cuối truy cập giao diện thông qua CloudFront, nơi phân phối nội dung tĩnh được lưu trữ trên Amazon S3. Các yêu cầu API được chuyển đến Nginx và sau đó định tuyến nội bộ đến ứng dụng Spring Boot xử lý nghiệp vụ. Dữ liệu giao dịch được lưu trữ an toàn trong Amazon RDS for SQL Server ở private subnet, trong khi AWS Map hỗ trợ các tính năng hiển thị và tích hợp bản đồ trên frontend.</p>
-<p><img src="../../images/2-Proposal/aws-ev-architecture.png" alt="Kiến trúc hệ thống trạm sạc EV"></p>
+<p>Hệ thống được thiết kế theo mô hình phân lớp, triển khai trên VPC với nhiều Availability Zone để đảm bảo tính sẵn sàng cao và khả năng mở rộng.</p>
+<p><img src="../../images/2-Proposal/AWS-architecture.png" alt="EV Charging System Architecture"></p>
+<h4 id="mô-hình-kiến-trúc-aws-theo-luồng-xử-lý">Mô hình kiến trúc AWS theo luồng xử lý</h4>
+<p><strong>(1) User → Internet</strong><br>
+Người dùng truy cập hệ thống thông qua trình duyệt hoặc ứng dụng.</p>
+<p><strong>(2) Internet → Route 53</strong><br>
+Route 53 thực hiện phân giải DNS và điều hướng request.</p>
+<p><strong>(3) Route 53 → CloudFront + WAF</strong><br>
+CloudFront phân phối nội dung và WAF kiểm tra request nhằm ngăn chặn tấn công.</p>
+<p><strong>(4) Frontend → Amazon Location Service</strong><br>
+Frontend gọi API map để hiển thị vị trí trạm sạc.</p>
+<p><strong>(5) CloudFront → Amazon S3 (Frontend)</strong><br>
+CloudFront lấy tài nguyên tĩnh từ S3 thông qua OAC.</p>
+<hr>
+<p><strong>(6) CloudFront → ALB</strong><br>
+CloudFront forward API request đến Application Load Balancer.</p>
+<p><strong>(7) ALB → EC2 (Private Subnet - AZ1)</strong><br>
+ALB phân phối request đến EC2 instance.</p>
+<p><strong>(8) Auto Scaling Group (AZ1 ↔ AZ2)</strong><br>
+EC2 instances được scale tự động và chạy đa AZ.</p>
+<hr>
+<p><strong>(9) EC2 → Amazon RDS (Primary/Standby)</strong><br>
+Backend truy vấn database RDS Multi-AZ.</p>
+<hr>
+<p><strong>(10) EC2 → NAT Gateway → Internet</strong><br>
+EC2 gọi ra external services thông qua NAT Gateway.</p>
+<p><strong>(11) EC2 (AZ2) → RDS</strong><br>
+Instance ở AZ2 đảm bảo khả năng failover.</p>
+<hr>
+<p><strong>(12) NAT Gateway → Internet Gateway</strong><br>
+Cho phép outbound traffic.</p>
+<p><strong>(13) Internet Gateway → Internet</strong><br>
+Kết nối ra bên ngoài.</p>
+<hr>
+<h3 id="tầng-data-layer">Tầng Data Layer</h3>
+<ul>
+<li>Amazon RDS for SQL Server (Multi-AZ)</li>
+<li>Không public access</li>
+<li>Tự động failover</li>
+</ul>
+<hr>
+<h3 id="tầng-observability--security">Tầng Observability &amp; Security</h3>
+<p><strong>(14) EC2 → Amazon SES</strong><br>
+Gửi email hệ thống.</p>
+<p><strong>(15) EC2 → Secrets Manager + KMS</strong><br>
+Lấy secrets và giải mã dữ liệu.</p>
+<p><strong>(16) Admin → AWS Systems Manager (SSM)</strong><br>
+Quản trị EC2 an toàn, không cần SSH.</p>
+<p><strong>(17) Response → CloudFront → User</strong><br>
+Trả response về client.</p>
+<hr>
 <table>
   <thead>
       <tr>
@@ -1161,250 +1199,175 @@
   </thead>
   <tbody>
       <tr>
-          <td>Lưu trữ frontend</td>
-          <td>Amazon S3</td>
+          <td>DNS</td>
+          <td>Route 53</td>
       </tr>
       <tr>
-          <td>Phân phối nội dung</td>
-          <td>Amazon CloudFront</td>
+          <td>CDN</td>
+          <td>CloudFront</td>
       </tr>
       <tr>
-          <td>Tích hợp bản đồ</td>
-          <td>AWS Map</td>
+          <td>Security</td>
+          <td>WAF</td>
       </tr>
       <tr>
-          <td>Bộ định tuyến ngược</td>
-          <td>Nginx</td>
+          <td>Frontend</td>
+          <td>S3</td>
       </tr>
       <tr>
-          <td>Khung phát triển backend</td>
-          <td>Spring Boot 3.5.6</td>
+          <td>Backend</td>
+          <td>EC2 (Private Subnet)</td>
       </tr>
       <tr>
-          <td>Ngôn ngữ lập trình</td>
-          <td>Java 17</td>
+          <td>Load balancing</td>
+          <td>ALB</td>
       </tr>
       <tr>
-          <td>Lớp giao tiếp API</td>
-          <td>REST Controllers</td>
+          <td>Scaling</td>
+          <td>Auto Scaling Group</td>
       </tr>
       <tr>
-          <td>Lớp nghiệp vụ</td>
-          <td>Service Interfaces và Implementations</td>
+          <td>Database</td>
+          <td>RDS Multi-AZ</td>
       </tr>
       <tr>
-          <td>Lớp truy cập dữ liệu</td>
-          <td>Spring Data JPA + Hibernate</td>
+          <td>Monitoring</td>
+          <td>CloudWatch</td>
       </tr>
       <tr>
-          <td>Cơ sở dữ liệu</td>
-          <td>Amazon RDS for SQL Server</td>
+          <td>Logging</td>
+          <td>CloudTrail</td>
       </tr>
       <tr>
-          <td>Xác thực và phân quyền</td>
-          <td>Spring Security + JWT + OAuth2</td>
+          <td>Secrets</td>
+          <td>Secrets Manager</td>
       </tr>
       <tr>
-          <td>Cổng thanh toán</td>
-          <td>VNPay</td>
+          <td>Encryption</td>
+          <td>KMS</td>
       </tr>
       <tr>
-          <td>Thông báo email</td>
-          <td>SMTP + Thymeleaf</td>
+          <td>Email</td>
+          <td>SES</td>
       </tr>
       <tr>
-          <td>Tài liệu API</td>
-          <td>Swagger / OpenAPI</td>
-      </tr>
-      <tr>
-          <td>Xử lý nền</td>
-          <td>Spring Scheduling + Async Executors</td>
+          <td>Admin Access</td>
+          <td>AWS SSM</td>
       </tr>
   </tbody>
 </table>
-<h4 id="các-dịch-vụ-aws-được-sử-dụng">Các dịch vụ AWS được sử dụng</h4>
-<ul>
-<li><strong>Amazon S3</strong>: Lưu trữ tài nguyên tĩnh của frontend và các tệp tải lên khi cần</li>
-<li><strong>Amazon CloudFront</strong>: Phân phối nội dung frontend và tệp tĩnh với độ trễ thấp</li>
-<li><strong>Amazon RDS for SQL Server</strong>: Cung cấp hạ tầng cơ sở dữ liệu quan hệ được quản lý trong lớp mạng riêng an toàn hơn</li>
-<li><strong>AWS Map</strong>: Hỗ trợ hiển thị vị trí và các tính năng bản đồ trên giao diện người dùng</li>
-<li><strong>Amazon EC2 hoặc môi trường tính toán tương đương</strong>: Lưu trữ Nginx và ứng dụng Spring Boot trong lớp backend</li>
-<li><strong>Hạ tầng email SMTP</strong>: Phục vụ gửi OTP, xác nhận booking, cập nhật thanh toán và các thông báo vận hành khác</li>
-</ul>
-<h4 id="thiết-kế-các-thành-phần">Thiết kế các thành phần</h4>
-<p>Giải pháp được chia thành các lớp và phân hệ chính như sau:</p>
-<ul>
-<li><strong>Lớp frontend và CDN</strong>: Người dùng cuối truy cập ứng dụng web thông qua CloudFront, nơi phân phối các tài nguyên frontend được lưu trên Amazon S3</li>
-<li><strong>Lớp tích hợp bản đồ</strong>: Frontend kết nối với AWS Map để lấy và hiển thị dữ liệu bản đồ</li>
-<li><strong>Lớp tiếp nhận API qua Nginx</strong>: Nginx nhận các yêu cầu HTTPS và chuyển tiếp an toàn đến ứng dụng backend</li>
-<li><strong>Lớp ứng dụng backend</strong>: Spring Boot xử lý toàn bộ nghiệp vụ như xác thực, booking, phiên sạc, hóa đơn và thanh toán</li>
-<li><strong>Lớp cơ sở dữ liệu</strong>: Amazon RDS for SQL Server lưu trữ dữ liệu giao dịch như người dùng, booking, hóa đơn, phiên sạc và bản ghi tuân thủ</li>
-<li><strong>Phân hệ xác thực</strong>: Xử lý đăng ký, đăng nhập, phát hành JWT, vô hiệu hóa token khi đăng xuất, đăng nhập OAuth2 và đặt lại mật khẩu bằng OTP</li>
-<li><strong>Phân hệ đặt chỗ</strong>: Quản lý giữ slot, tạo booking, xác nhận booking, hủy booking và giải phóng các booking quá hạn</li>
-<li><strong>Phân hệ phiên sạc</strong>: Điều phối thời điểm bắt đầu và kết thúc phiên sạc, theo dõi điện năng tiêu thụ và trạng thái phiên</li>
-<li><strong>Phân hệ hóa đơn và tính phí</strong>: Tự động sinh hóa đơn từ các phiên sạc hoàn tất và áp dụng giảm giá khi phù hợp</li>
-<li><strong>Phân hệ thanh toán</strong>: Tạo đường dẫn thanh toán VNPay, xác thực callback và cập nhật trạng thái giao dịch, hóa đơn</li>
-<li><strong>Phân hệ trạm sạc và slot</strong>: Quản lý trạm, cổng sạc, biểu phí, lịch vận hành và tình trạng slot theo ngày</li>
-<li><strong>Phân hệ tuân thủ</strong>: Theo dõi vi phạm của tài xế, áp dụng quy tắc xử lý và hỗ trợ logic cấm tạm thời khi vi phạm lặp lại</li>
-<li><strong>Phân hệ điểm thưởng</strong>: Quản lý số dư điểm thưởng và hỗ trợ quy đổi điểm khi thanh toán</li>
-<li><strong>Phân hệ thông báo</strong>: Gửi email bất đồng bộ và hỗ trợ giao tiếp nội bộ theo cơ chế sự kiện</li>
-</ul>
+<hr>
 <h3 id="4-triển-khai-kỹ-thuật">4. Triển khai kỹ thuật</h3>
 <h4 id="cách-tiếp-cận-xử-lý-nghiệp-vụ">Cách tiếp cận xử lý nghiệp vụ</h4>
-<p>Mặc dù hệ thống không sử dụng bộ máy gợi ý dựa trên trí tuệ nhân tạo, nền tảng này áp dụng một cơ chế xử lý nghiệp vụ theo luật, tập trung vào phân bổ slot, tính biểu phí, xác thực thanh toán và thực thi chính sách quản lý.</p>
-<p>Các luồng kỹ thuật và nghiệp vụ chính bao gồm:</p>
-<ul>
-<li>Chỉ cho phép tạo booking đối với những slot đang ở trạng thái khả dụng</li>
-<li>Khi booking được xác nhận, các slot liên quan sẽ được khóa cho mục đích sử dụng thực tế</li>
-<li>Khi phiên sạc kết thúc, hệ thống tự động tạo hóa đơn dựa trên dữ liệu sử dụng</li>
-<li>Điểm thưởng có thể được áp dụng trong bước thanh toán và được chốt sau khi giao dịch thành công</li>
-<li>Cơ chế nhóm vi phạm hỗ trợ nâng mức xử lý và ban tạm thời tài xế khi cần</li>
-<li>Các tác vụ chạy nền theo lịch sẽ tự động sinh slot mới và giải phóng booking quá hạn</li>
-<li>Nginx chuyển tiếp lưu lượng HTTPS an toàn đến backend để xử lý nội bộ</li>
-<li>Backend kết nối với Amazon RDS for SQL Server để thực hiện các truy vấn dữ liệu trong hạ tầng được kiểm soát</li>
-</ul>
-<p>Cách tiếp cận này giúp hệ thống đảm bảo tính nhất quán, khả năng kiểm soát và độ tin cậy cao trong toàn bộ quy trình vận hành.</p>
+<p>Hệ thống sử dụng Spring Boot backend kết hợp JWT authentication.</p>
+<p>Luồng hoạt động:</p>
+<ol>
+<li>User request → Route 53 → CloudFront</li>
+<li>CloudFront kiểm tra WAF</li>
+<li>CloudFront lấy frontend từ S3</li>
+<li>API request → ALB → EC2</li>
+<li>Backend verify JWT</li>
+<li>Backend xử lý business logic</li>
+<li>Backend truy vấn RDS</li>
+<li>Backend gọi external service qua NAT Gateway</li>
+<li>Backend gửi email qua SES</li>
+<li>Response trả về CloudFront → User</li>
+</ol>
 <h4 id="yêu-cầu-kỹ-thuật">Yêu cầu kỹ thuật</h4>
-<p>Giải pháp backend được xây dựng trên tập hợp công nghệ và yêu cầu kỹ thuật như sau:</p>
 <ul>
-<li><strong>Phân phối frontend</strong>: Tài nguyên tĩnh của frontend được lưu trên Amazon S3 và phân phối qua Amazon CloudFront</li>
-<li><strong>Tích hợp bản đồ</strong>: AWS Map phục vụ hiển thị bản đồ và các chức năng liên quan đến vị trí</li>
-<li><strong>Định tuyến API</strong>: Nginx dùng để tiếp nhận và chuyển tiếp lưu lượng API</li>
-<li><strong>Khung phát triển backend</strong>: Spring Boot với Java 17 và Maven</li>
-<li><strong>Bảo mật</strong>: Spring Security, JWT, OAuth2 và BCrypt để mã hóa mật khẩu</li>
-<li><strong>Cơ sở dữ liệu</strong>: Amazon RDS for SQL Server kết hợp Hibernate và Spring Data JPA</li>
-<li><strong>Thanh toán</strong>: Tích hợp VNPay với cơ chế xác thực chữ ký HMAC-SHA512</li>
-<li><strong>Thông báo</strong>: Dịch vụ email SMTP với template Thymeleaf</li>
-<li><strong>Xử lý bất đồng bộ</strong>: Thread pool riêng kết hợp <code>@Async</code> để tránh chặn luồng xử lý chính</li>
-<li><strong>Tác vụ theo lịch</strong>: Các job theo cron hoặc fixed delay để quản lý slot và booking</li>
-<li><strong>Tài liệu kỹ thuật</strong>: Swagger / OpenAPI phục vụ việc kiểm thử và tích hợp API</li>
+<li>Frontend: S3 + CloudFront</li>
+<li>Backend: Spring Boot (Java 17)</li>
+<li>Authentication: JWT</li>
+<li>Database: RDS SQL Server</li>
+<li>Load balancing: ALB</li>
+<li>Scaling: Auto Scaling</li>
+<li>Security: WAF + Secrets Manager + KMS</li>
+<li>Monitoring: CloudWatch + CloudTrail</li>
+<li>Email: SES</li>
+<li>Admin: AWS SSM</li>
 </ul>
-<h3 id="5-kế-hoạch-triển-khai-và-các-cột-mốc">5. Kế hoạch triển khai và các cột mốc</h3>
-<p>Dự án có thể được triển khai theo từng giai đoạn rõ ràng để giảm rủi ro và đảm bảo kiểm soát chất lượng:</p>
+<hr>
+<h3 id="5-kế-hoạch-triển-khai">5. Kế hoạch triển khai</h3>
 <ul>
-<li><strong>Tuần 7-8</strong>: Hoàn thiện mô hình dữ liệu, cấu hình bảo mật, cấu trúc cơ sở dữ liệu, bố cục hạ tầng frontend-backend và cấu hình cloud cốt lõi</li>
-<li><strong>Tuần 8</strong>: Xây dựng các luồng booking, vòng đời phiên sạc và quản lý trạm-slot</li>
-<li><strong>Tuần 9</strong>: Tích hợp sinh hóa đơn, cổng thanh toán VNPay, dịch vụ thông báo email và phần tích hợp bản đồ</li>
-<li><strong>Tuần 10</strong>: Hoàn thiện tính năng điểm thưởng, quản lý vi phạm và các chức năng theo vai trò</li>
-<li><strong>Tuần 11</strong>: Thực hiện kiểm thử tích hợp, tối ưu hiệu năng, xác thực hạ tầng và hardening cho môi trường production</li>
-<li><strong>Tuần 12</strong>: Triển khai hệ thống, thiết lập giám sát và chuẩn bị đưa vào vận hành chính thức</li>
+<li>Tuần 7–8: Thiết kế kiến trúc AWS + VPC</li>
+<li>Tuần 8–9: Triển khai backend + database</li>
+<li>Tuần 9–10: Tích hợp payment + email + map</li>
+<li>Tuần 10–11: Bảo mật + monitoring + scaling</li>
+<li>Tuần 12: Deploy production</li>
 </ul>
-<p>Cách triển khai theo từng mốc như trên giúp mỗi phân hệ được hoàn thiện và kiểm thử trước khi chuyển sang bước tiếp theo.</p>
+<hr>
 <h3 id="6-dự-toán-chi-phí">6. Dự toán chi phí</h3>
 <table>
   <thead>
       <tr>
           <th>Thành phần</th>
           <th>Dịch vụ</th>
-          <th>Chi phí ước tính</th>
+          <th>Chi phí</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Lưu trữ frontend</td>
-          <td>Amazon S3</td>
+          <td>Frontend</td>
+          <td>S3 + CloudFront</td>
           <td>Thấp</td>
       </tr>
       <tr>
-          <td>Phân phối nội dung</td>
-          <td>CloudFront</td>
-          <td>Thấp</td>
-      </tr>
-      <tr>
-          <td>Hạ tầng backend</td>
-          <td>EC2 hoặc môi trường chạy tương đương</td>
+          <td>Backend</td>
+          <td>EC2 + ALB</td>
           <td>Trung bình</td>
       </tr>
       <tr>
-          <td>Cơ sở dữ liệu</td>
-          <td>Amazon RDS for SQL Server</td>
-          <td>Trung bình đến cao</td>
+          <td>Database</td>
+          <td>RDS Multi-AZ</td>
+          <td>Trung bình – cao</td>
       </tr>
       <tr>
-          <td>Dịch vụ bản đồ</td>
-          <td>AWS Map</td>
-          <td>Phụ thuộc mức sử dụng</td>
-      </tr>
-      <tr>
-          <td>Dịch vụ email</td>
-          <td>SMTP / nhà cung cấp email</td>
+          <td>Security</td>
+          <td>WAF + KMS + Secrets</td>
           <td>Thấp</td>
       </tr>
       <tr>
-          <td>Cổng thanh toán</td>
-          <td>Phí giao dịch VNPay</td>
-          <td>Thay đổi theo sản lượng giao dịch</td>
+          <td>Monitoring</td>
+          <td>CloudWatch</td>
+          <td>Thấp</td>
       </tr>
       <tr>
-          <td>Giám sát và nhật ký hệ thống</td>
-          <td>Hệ thống theo dõi cloud tùy chọn</td>
-          <td>Thấp đến trung bình</td>
-      </tr>
-      <tr>
-          <td><strong>Tổng cộng</strong></td>
-          <td></td>
-          <td><strong>Phụ thuộc mức sử dụng thực tế</strong></td>
+          <td>Email</td>
+          <td>SES</td>
+          <td>Thấp</td>
       </tr>
   </tbody>
 </table>
-<p><strong>Lưu ý</strong>: Chi phí thực tế sẽ phụ thuộc vào mô hình triển khai, lưu lượng truy cập, số lượng trạm sạc, tần suất sử dụng API, tần suất thanh toán, số lượng yêu cầu bản đồ và dung lượng lưu trữ phát sinh. Với kiến trúc hiện tại, hệ thống phù hợp để triển khai theo từng giai đoạn với chi phí ban đầu hợp lý, sau đó mở rộng theo nhu cầu thực tế.</p>
+<hr>
 <h3 id="7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</h3>
-<h4 id="ma-trận-rủi-ro">Ma trận rủi ro</h4>
-<p>Một số rủi ro quan trọng đã được xác định trong thiết kế và triển khai hiện tại gồm:</p>
+<h4 id="rủi-ro">Rủi ro</h4>
 <ul>
-<li><strong>Xung đột khi nhiều người cùng đặt một slot</strong>: Tác động cao, xác suất trung bình</li>
-<li><strong>Lỗi callback hoặc đối soát thanh toán</strong>: Tác động cao, xác suất trung bình</li>
-<li><strong>Thông tin bí mật lưu trong tệp cấu hình</strong>: Tác động cao, xác suất cao</li>
-<li><strong>Thiếu logging và khả năng quan sát hệ thống</strong>: Tác động trung bình, xác suất trung bình</li>
-<li><strong>Độ phủ kiểm thử tự động còn hạn chế</strong>: Tác động trung bình, xác suất trung bình</li>
-<li><strong>Nguy cơ nghẽn hiệu năng cơ sở dữ liệu khi mở rộng</strong>: Tác động trung bình, xác suất trung bình</li>
-<li><strong>Nguy cơ cấu hình sai giữa các lớp frontend, backend và cơ sở dữ liệu</strong>: Tác động trung bình, xác suất trung bình</li>
+<li>Quá tải hệ thống</li>
+<li>Lỗi payment</li>
+<li>Lộ secrets</li>
+<li>Lỗi cấu hình cloud</li>
 </ul>
-<h4 id="chiến-lược-giảm-thiểu">Chiến lược giảm thiểu</h4>
-<p>Để giảm thiểu các rủi ro trên, cần triển khai các biện pháp sau:</p>
+<h4 id="giải-pháp">Giải pháp</h4>
 <ul>
-<li>Tăng cường ràng buộc giao dịch và constraint ở cơ sở dữ liệu cho luồng giữ slot</li>
-<li>Chuyển secrets sang cơ chế quản lý tập trung trong môi trường production</li>
-<li>Cải thiện xử lý ngoại lệ và xây dựng chiến lược phản hồi lỗi thống nhất cho API</li>
-<li>Mở rộng phạm vi kiểm thử unit, integration và end-to-end</li>
-<li>Thiết lập logging có cấu trúc, tracing theo request và dashboard giám sát</li>
-<li>Tối ưu truy vấn dữ liệu thông qua index, phân trang và tuning query</li>
-<li>Bổ sung rate limiting và cơ chế chống lạm dụng đối với các endpoint xác thực và thanh toán</li>
-<li>Kiểm tra kỹ cấu hình mạng, subnet, HTTPS routing và chính sách kết nối từ backend đến database trước khi đưa vào production</li>
+<li>Auto Scaling</li>
+<li>Retry logic</li>
+<li>Secrets Manager</li>
+<li>CloudWatch monitoring</li>
 </ul>
-<h4 id="phương-án-dự-phòng">Phương án dự phòng</h4>
-<p>Trong trường hợp phát sinh sự cố trong quá trình vận hành, hệ thống cần chuẩn bị các phương án dự phòng như sau:</p>
-<ul>
-<li><strong>Sự cố thanh toán</strong>: Cho phép xác minh lại giao dịch và hỗ trợ quy trình đối soát thủ công</li>
-<li><strong>Lỗi gửi email</strong>: Bổ sung cơ chế retry và theo dõi trạng thái thông báo</li>
-<li><strong>Lỗi scheduler hoặc sinh slot</strong>: Cung cấp job khôi phục thủ công và dashboard hỗ trợ vận hành</li>
-<li><strong>Vấn đề hiệu năng khi tăng trưởng nhanh</strong>: Áp dụng cache, tối ưu các endpoint đọc nhiều và chuẩn bị cho phương án tách dịch vụ nếu cần</li>
-<li><strong>Rủi ro lộ thông tin bảo mật</strong>: Xoay vòng thông tin truy cập ngay lập tức và chuyển hoàn toàn sang secret manager</li>
-<li><strong>Sự cố hạ tầng triển khai</strong>: Chuẩn bị quy trình rollback và checklist xác thực môi trường</li>
-</ul>
+<hr>
 <h3 id="8-kết-quả-kỳ-vọng">8. Kết quả kỳ vọng</h3>
 <h4 id="cải-tiến-kỹ-thuật">Cải tiến kỹ thuật</h4>
-<p>Giải pháp backend được kỳ vọng mang lại các cải tiến kỹ thuật rõ rệt như:</p>
 <ul>
-<li>Tập trung toàn bộ điều phối booking, phiên sạc, hóa đơn và thanh toán vào một nền tảng duy nhất</li>
-<li>Tăng độ ổn định nhờ các luật nghiệp vụ rõ ràng, tự động hóa và tác vụ bảo trì theo lịch</li>
-<li>Đảm bảo phân quyền và bảo mật tốt cho tài xế, nhân viên và quản trị viên</li>
-<li>Rút ngắn thời gian xử lý thanh toán số và đối soát hóa đơn</li>
-<li>Nâng cao khả năng phân phối frontend thông qua Amazon S3 và CloudFront</li>
-<li>Tăng độ an toàn cho xử lý backend thông qua lớp Nginx và ứng dụng Spring Boot</li>
-<li>Tăng mức độ tách biệt hạ tầng nhờ cơ sở dữ liệu được đặt trên Amazon RDS for SQL Server ở lớp riêng</li>
-<li>Tăng khả năng bảo trì hệ thống nhờ tách lớp rõ ràng giữa controller, service và repository</li>
+<li>High availability</li>
+<li>Secure system</li>
+<li>Scalable architecture</li>
+<li>Monitoring đầy đủ</li>
 </ul>
 <h4 id="giá-trị-dài-hạn">Giá trị dài hạn</h4>
-<p>Về dài hạn, nền tảng không chỉ giải quyết bài toán kỹ thuật trước mắt mà còn tạo ra giá trị chiến lược cho đơn vị vận hành:</p>
 <ul>
-<li><strong>Khả năng mở rộng vận hành</strong>: Hỗ trợ phát triển mô hình nhiều trạm và số lượng booking ngày càng tăng</li>
-<li><strong>Sẵn sàng thương mại hóa</strong>: Tạo nền tảng số cho việc khai thác doanh thu từ dịch vụ sạc EV</li>
-<li><strong>Nâng cao khả năng giữ chân khách hàng</strong>: Khuyến khích sử dụng lặp lại thông qua điểm thưởng và trải nghiệm mượt mà hơn</li>
-<li><strong>Tăng cường kiểm soát chính sách</strong>: Quản lý tốt hơn các trường hợp quá giờ, sử dụng sai quy định và vi phạm lặp lại</li>
-<li><strong>Dễ mở rộng trong tương lai</strong>: Có thể phát triển sang kiến trúc microservices, phân tích nâng cao, tích hợp di động và dashboard vận hành</li>
-<li><strong>Tạo nền tảng dữ liệu kinh doanh</strong>: Dữ liệu booking, phiên sạc và thanh toán có thể phục vụ dự báo, phân tích hiệu suất và tối ưu chiến lược giá trong tương lai</li>
-<li><strong>Sẵn sàng về mặt hạ tầng</strong>: Thiết lập được mô hình cloud gần với production hơn, với ranh giới rõ ràng giữa lớp phân phối, lớp ứng dụng và lớp dữ liệu</li>
+<li>Sẵn sàng production</li>
+<li>Dễ mở rộng</li>
+<li>Tăng trải nghiệm người dùng</li>
 </ul>
 
 
@@ -2172,19 +2135,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1774925427"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1774925427"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1774925427"></script>
-    <script src="../../js/jquery.sticky.js?1774925427"></script>
-    <script src="../../js/featherlight.min.js?1774925427"></script>
-    <script src="../../js/highlight.pack.js?1774925427"></script>
+    <script src="../../js/clipboard.min.js?1775221866"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1775221866"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1775221866"></script>
+    <script src="../../js/jquery.sticky.js?1775221866"></script>
+    <script src="../../js/featherlight.min.js?1775221866"></script>
+    <script src="../../js/highlight.pack.js?1775221866"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1774925427"></script>
-    <script src="../../js/learn.js?1774925427"></script>
-    <script src="../../js/hugo-learn.js?1774925427"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1775221866"></script>
+    <script src="../../js/learn.js?1775221866"></script>
+    <script src="../../js/hugo-learn.js?1775221866"></script>
 
-    <link href="../../mermaid/mermaid.css?1774925427" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1774925427"></script>
+    <link href="../../mermaid/mermaid.css?1775221866" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1775221866"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

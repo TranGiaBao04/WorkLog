@@ -19,7 +19,7 @@ At a high level, the current implementation contains:
 - relational data for stations, slots, bookings, charging sessions, invoices, loyalty, and violations,
 - integrations for OTP, JWT, VNPay, SMTP, AWS-hosted frontend assets, AWS Location, and optional media storage adapters.
 
-![EV Charging System Architecture](/images/2-Proposal/aws-ev-architecture.png)
+![EV Charging System Architecture](/images/2-Proposal/AWS-architecture.png)
 
 ## Why the flow order matters
 
